@@ -17,6 +17,8 @@
     <div>
     <a href="{% url 'file_upload' %}">Upload Images</a>
     </div>
-    {% for image in images %} <img src="{{ MEDIA_URL }}{{ image }}" /> {% endfor %}
+    {% for image in images %} 
+      <img src="{{ image.image.url }}" />
+    {% endfor %}
   </body>
 </html>
