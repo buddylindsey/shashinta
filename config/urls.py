@@ -20,12 +20,8 @@ from django.conf.urls.static import static
 
 from images.views import UploadImageView, ImageListView
 
-urlpatterns = (
-    [
-        path("admin/", admin.site.urls),
-        path("", ImageListView.as_view(), name="list_images"),
-        path("upload/", UploadImageView.as_view(), name="file_upload"),
-    ]
-    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-)
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", ImageListView.as_view(), name="list_images"),
+    path("upload/", UploadImageView.as_view(), name="file_upload"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
