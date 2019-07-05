@@ -18,10 +18,17 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from images.views import UploadImageView, ImageListView
+from images.views import (
+    UploadImageView,
+    ImageListView,
+    ImageDetailView,
+    ImageDeleteView,
+)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", ImageListView.as_view(), name="list_images"),
     path("upload/", UploadImageView.as_view(), name="file_upload"),
+    path("images/<int:pk>/", ImageDetailView.as_view(), name="image"),
+    path("images/<int:pk>/delete/", ImageDeleteView.as_view(), name="delete_image"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

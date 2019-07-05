@@ -7,7 +7,7 @@
     <a href="{% url 'file_upload' %}">Upload Images</a>
   </div>
   {% for image in images %}
-    <img src="{{ image.image.url }}" />
+    <a href="{% url "image" image.pk %}"><img src="{{ image.image.url }}" /></a>
   {% endfor %}
 </div>
 {% endblock %}

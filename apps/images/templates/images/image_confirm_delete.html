@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="post">{% csrf_token %}
+        <div class="form-group">
+        Are you sure you want to delete "{{ object.image.name }}"?
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+    </form>
+</div>
+{% endblock content %}

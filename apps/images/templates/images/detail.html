@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <img src="{{ image.image.url }}" />
+    </div>
+    <div class="row">
+        <a class="btn btn-danger" href="{% url "delete_image" image.pk %}">delete</a>
+    </div>
+</div>
+{% endblock %}
