@@ -1,18 +1,18 @@
 from os import listdir
 from os.path import isfile, join
 
-from django.core.files.storage import FileSystemStorage
 from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
-from django.views.generic import (
-    FormView,
-    TemplateView,
-    CreateView,
-    ListView,
-    DetailView,
-    DeleteView,
-)
 from django.urls import reverse_lazy
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    FormView,
+    ListView,
+    TemplateView,
+)
 
 from .forms import ImageUploadForm
 from .models import Image

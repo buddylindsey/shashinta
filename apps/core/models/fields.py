@@ -11,7 +11,7 @@ class FileChecksumField(models.CharField):
         super().__init__(*args, **kwargs)
 
     def update_field(self, model_instance):
-        sha = hashlib.sha3_256()
+        sha = hashlib.sha256()
         upload = getattr(model_instance, self._field)
         for chunk in upload.chunks():
             sha.update(chunk)
