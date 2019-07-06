@@ -39,4 +39,3 @@ class ImageDetailView(DetailView):
 class ImageDeleteView(DeleteView):
     model = Image
     success_url = reverse_lazy("list_images")
-
