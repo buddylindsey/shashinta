@@ -1,5 +1,6 @@
 <p align="center">
-<h2>写真立て (shashinta)</h2>
+写真立て (shashintate)
+<br />
 <strong>DIY Digital Picture Frame</strong>
 </p>
 
