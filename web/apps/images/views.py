@@ -22,6 +22,7 @@ class ImageListView(ListView):
     model = Image
     template_name = "images/list.html"
     context_object_name = "images"
+    paginate_by = 20
 
 
 class UploadImageView(CreateView):
