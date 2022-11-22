@@ -1,4 +1,4 @@
 Django==2.2.3
 django-extensions==2.1.9
-Pillow==6.0.0
+Pillow==9.3.0
 gunicorn==19.9.0
